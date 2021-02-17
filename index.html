@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Racing Cup</title>
+    <link rel="stylesheet" href="./js/libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" type="image/png" href="./assets/img/royal_racing-logo.png" />
   </head>
@@ -12,19 +13,95 @@
     <section class="main-wrapper">
       <div class="social-wrapper">
         <a href="#">
-          <img src="./assets/icons/discord.png" alt="" />
+          <img class="hover-scale" src="./assets/icons/discord.png" alt="" />
         </a>
         <a href="#">
-          <img src="./assets/icons/twitch.png" alt="" />
+          <img class="hover-scale" src="./assets/icons/twitch.png" alt="" />
         </a>
         <a href="#">
-          <img src="./assets/icons/telegram.png" alt="" />
+          <img class="hover-scale" src="./assets/icons/telegram.png" alt="" />
         </a>
       </div>
+      <img id="assetto-corsa_logo" src="./assets/img/assetto-corsa.png" alt="">
       <div class="main-wrapper-content">
         <img src="./assets/img/royal_racing-logo.png" alt="Royal Racing Team" />
         <h1>Assetto Corsa Racing Team</h1>
       </div>
+      <div class="scroll-btn-wrapper">
+        <span class="scroll-btn">
+          <a href="#">
+            <span class="mouse">
+              <span> </span>
+            </span>
+          </a>
+          <p>scroll me</p>
+        </span>
+      </div>
     </section>
+    <section id="section-two">
+      <div class="container">
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+      </div>
+    </section>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./assets/img/slider/slider-1.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/slider/slider-2.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/slider/slider-3.png" alt="">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <section id="section-three">
+      <div class="container">
+        <div id="discover-ayrton">
+          <img class="hover-scale" src="./assets/img/casco-ayrton.png" alt="" />
+
+          <div class="text-btn">
+            <p class="text-center">
+              Abbiamo sviluppato un nostro portale per la creazione e la gestione dei campionati e degli eventi singoli su Assetto Corsa.
+              <br>
+              Lo abbiamo chiamato <strong>Ayrton</strong> in onore del grande pilota scomparso a Imola nel 1994. <br>
+              Unisciti a noi cliccando qui sotto.
+            </p>
+            <a href="#">
+              <button class="btn-primary">Go to Ayrton</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      ©Royal Racing 2021 
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="js/libs/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        autoplay: {
+          delay: 5000,
+        },
+        loop:true
+      });
+    </script>
   </body>
 </html>
