@@ -16,6 +16,7 @@
 
 body{
     font-family: "stable";
+    overflow-x: hidden;
 }
 
 p,button,footer{
@@ -47,6 +48,7 @@ p,button,footer{
     right: 0;
     /* bottom: 0; */
     padding: 30px;
+    display: flex;
 }
 
 .social-wrapper img{
@@ -62,14 +64,47 @@ p,button,footer{
   transform: translate(-50%, -50%);
   color: black;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
 .main-wrapper-content img{
-    max-width: 100%;
+    /* max-width: 100%; */
+    animation: opacity 3.5s;
+
 }
 
-.main-wrapper-content h1{
+/* .main-wrapper-content h1{
     padding: 10px 0 10px 50px;
+} */
+
+#title{
+  font-size: 3rem;
+  position: relative;
+  animation: moveToRight 2s;
+}
+
+#subTitle{
+  position: relative;
+  padding: 10px 0 10px 100px;
+  animation: moveToLeft 2s;
+}
+
+@keyframes moveToRight{
+  from{left:-100%;}
+  to{left:0%;}
+}
+
+@keyframes moveToLeft{
+  from{right:-100%;}
+  to{right:0%;}
+}
+
+@keyframes opacity {
+  from{opacity: 0;}
+  to{opacity: 1;}
 }
 
 #assetto-corsa_logo{
@@ -253,6 +288,7 @@ p,button,footer{
 .swiper-container {
   width: 100%;
   height: 500px;
+  cursor: pointer;
 }
 
 .swiper-slide {
@@ -293,9 +329,5 @@ footer{
   font-size : 1rem;
 }
 
-  @media (min-width: 1200px){
-    .container {
-      max-width: 1140px;
-    }
-  }
+  
  

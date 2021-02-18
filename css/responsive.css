@@ -1,0 +1,54 @@
+@media (min-width: 1200px){
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+
+@media screen and (max-width:450px){
+
+    .main-wrapper-content{
+        width: 90%;
+    }
+
+    .main-wrapper-content img{
+       max-width: 100%; 
+    }
+
+    .container{
+        width: auto;
+    }
+
+    #title{
+        font-size: 1.5rem;
+    }
+
+    #subTitle{
+        padding: 0;
+        font-size: 0.8rem;
+      }
+
+    .scroll-btn-wrapper{
+        display: none;
+    }
+
+    .social-wrapper{
+        right: auto;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: opacity 4.5s;
+    }
+
+    #assetto-corsa_logo{
+        width: 25%;
+    }
+
+    .swiper-container{
+        height: auto;
+    }
+
+    #discover-ayrton{
+        flex-wrap: wrap;
+    }
+}

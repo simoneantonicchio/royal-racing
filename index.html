@@ -7,6 +7,7 @@
     <title>Racing Cup</title>
     <link rel="stylesheet" href="./js/libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="icon" type="image/png" href="./assets/img/royal_racing-logo.png" />
   </head>
   <body>
@@ -25,7 +26,8 @@
       <img id="assetto-corsa_logo" src="./assets/img/assetto-corsa.png" alt="">
       <div class="main-wrapper-content">
         <img src="./assets/img/royal_racing-logo.png" alt="Royal Racing Team" />
-        <h1>Assetto Corsa Racing Team</h1>
+        <h1 id="title">Royal Racing</h1>
+        <h1 id="subTitle">Assetto Corsa Racing Team</h1>
       </div>
       <div class="scroll-btn-wrapper">
         <span class="scroll-btn">
@@ -94,53 +96,7 @@
 
     <!-- Swiper JS -->
     <script src="js/libs/swiper/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-        autoplay: {
-          delay: 5000,
-        },
-        loop:true,
-        keyboard: {
-          enabled: true,
-          onlyInViewport: false,
-        },
-      });
-
-      var isFullscreen = false;
-      var elem = document.querySelector(".swiper-container");
-
-      function fullscreen() {
-        if (!isFullscreen){
-          if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) { /* Safari */
-            elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) { /* IE11 */
-            elem.msRequestFullscreen();
-          }
-
-          isFullscreen = true;
-        }
-
-        else {
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          } else if (document.webkitExitFullscreen) { /* Safari */
-            document.webkitExitFullscreen();
-          } else if (document.msExitFullscreen) { /* IE11 */
-            document.msExitFullscreen();
-          }
-          isFullscreen = false;
-        }
-      }
-    </script>
+    <!-- Initialize index js -->
+    <script src="./js/index.js"></script>
   </body>
 </html>
