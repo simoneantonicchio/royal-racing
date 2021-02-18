@@ -279,6 +279,10 @@ p,button,footer{
   background: #CDA538;
 }
 
+.swiper-button-next, .swiper-button-prev {
+    color: #CDA538;
+}
+
 footer{
   height: 40px;
   background-color: black;
