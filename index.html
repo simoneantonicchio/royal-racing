@@ -52,19 +52,22 @@
       </div>
     </section>
     <div class="swiper-container">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper" onclick='fullscreen();'>
         <div class="swiper-slide">
-          <img src="./assets/img/slider/slider-1.png" alt="">
+          <img src="./assets/img/slider/slider-1.png" alt="" width="100%">
         </div>
         <div class="swiper-slide">
-          <img src="./assets/img/slider/slider-2.png" alt="">
+          <img src="./assets/img/slider/slider-2.png" alt="" width="100%">
         </div>
         <div class="swiper-slide">
-          <img src="./assets/img/slider/slider-3.png" alt="">
+          <img src="./assets/img/slider/slider-3.png" alt="" width="100%">
         </div>
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
+      <!-- Fa figo avere i pulsanti, change my mind -->
+       <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
     <section id="section-three">
       <div class="container">
@@ -97,11 +100,47 @@
         pagination: {
           el: ".swiper-pagination",
         },
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
         autoplay: {
           delay: 5000,
         },
-        loop:true
+        loop:true,
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false,
+        },
       });
+
+      var isFullscreen = false;
+      var elem = document.querySelector(".swiper-container");
+
+      function fullscreen() {
+        if (!isFullscreen){
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+          }
+
+          isFullscreen = true;
+        }
+
+        else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+          } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+          }
+          isFullscreen = false;
+        }
+      }
     </script>
   </body>
 </html>
