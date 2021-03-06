@@ -20,8 +20,13 @@ body{
 }
 
 p,button,footer{
-  font-family: "Cabin-regular";
+  font-family: sans-serif;
   font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+a{
+  color: #CDA538;
 }
 
 .main-wrapper {
@@ -240,7 +245,7 @@ p,button,footer{
 }
 
 #section-two{
-  margin: 40px 0;
+  margin: 100px 0;
 }
 
 #section-two > .container > p:first-child{
